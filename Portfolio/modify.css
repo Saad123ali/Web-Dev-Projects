@@ -1,0 +1,823 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* for allover body styles and also add dark mode */
+body{
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+}
+/* for light mode body */
+body.light {
+    background-color: var(--light-background);
+    color: var(--light-color);
+}
+/* for Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color); 
+}
+::-webkit-scrollbar-track {
+     background-color: var(--dark-background);
+}
+/* Root Variables */
+:root {
+    --dark-background: #343740;
+    --dark-color: rgb(64, 183, 223);
+    --light-background: white;
+    --light-color: black;
+    --dark-box-shadow: -5px 5px 5px var(--dark-color), -5px 5px 10px var(--dark-color);
+    --light-box-shadow: -5px 5px 5px var(--light-color), 5px 5px 10px var(--light-color);
+}
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+/* for dark mode header */
+header.dark {
+    background:rgba(0, 0, 0, 0);
+    color: var(--dark-color);
+}
+/* for light mode header */
+header.light {
+    background:rgba(0, 0, 0, 0);
+    color: var(--light-color);
+}
+/* for navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 88px;
+}
+/* for navbar logo */
+.navbar .logo {
+    font-family: "Rowdies", sans-serif;
+    font-size: 2rem;
+    color: var(--dark-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* light mode logo */
+body.light .navbar .logo {
+    color: var(--light-color);
+}
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+/* for navbar */
+.navbar .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 44px;
+}
+.navbar li {
+    list-style: none;
+}
+/* for navbar links */
+.navbar a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    justify-items: end;
+}
+/* for light mode  navbar link  */
+body.light .navbar a {
+    color: var(--light-color);
+}
+/* navbar link underline effect */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: var(--dark-color);
+    transition: width 0.3s ease;
+}
+/* light mode navbar effect */
+body.light .navbar a::after {
+    background-color: var(--light-color);
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+/* for hamburger navbar */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: var(--dark-color);
+}
+/* for light mode hamburger navbar */
+body.light .hamburger .bar {
+    background-color: var(--light-color);
+}
+.bar:hover {
+    transform: scale(1.2);
+}
+/* Sun Icon */
+#sun {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    color: var(--dark-color);
+    font-size: x-large;
+}
+body.light #sun {
+    color: var(--light-color);
+}
+/* Home Section */
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+    padding: 0 20px;
+}
+/* for light mode home section */
+body.light .home-section {
+    background-color: var(--light-background);
+    color: var(--light-color);
+}
+/* home container with dark mode */
+.home-container {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--dark-box-shadow);
+    max-width: 1200px;
+    width: 100%;
+}
+/* home container with light mode */
+body.light .home-container {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--light-box-shadow);
+}
+/* for image  container*/
+.home-image {
+    flex: 1;
+    padding-right: 20px;
+    position: relative;
+}
+/* for image */
+.home-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home-image:hover img {
+    transform: scale(1.1);
+    box-shadow :2px 2px 5px var(--dark-color), -2px -2px 10px var(--dark-color);
+}
+body.light .home-image img {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+body.light .home-image:hover img {
+    box-shadow :2px 2px 5px var(--light-color), -2px -2px 10px var(--light-color);
+}
+/* for home bio  */
+.home-bio {
+    flex: 2;
+    padding-left: 20px;
+}
+/* for home bio  */
+.home-bio h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+/* for home bio  */
+.home-bio p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+/* for home buttton  */
+.cta-button {
+    display: inline-block;
+    padding: 3px 20px;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    background-color: var(--light-background);
+    border: 2px solid var(--dark-color);
+    border-radius: 8px 8px 0px 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.cta-button:hover {
+    background-color: var(--dark-color);
+    color: var(--light-background);
+}
+/* for light mode button */
+body.light .cta-button {
+    color: var(--light-background);
+    background-color: var(--dark-background);
+    border: 2px solid var(--light-color);
+}
+body.light .cta-button:hover {
+    background-color: var(--light-background);
+    color: black;
+}
+/* Home section  Social Icons */
+.social-icons {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 20px;
+}
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    transition: color 0.3s;
+}
+.social-icon:hover {
+    color: var(--dark-background);
+    transform: scale(1.3);
+}
+/* for light mode social icons */
+body.light .social-icon {
+    color: var(--light-color);
+}
+body.light .social-icon:hover {
+    color: #404040;
+    transform: scale(1.3);
+}
+/* for Education Section  */
+#education {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+/* for Education section heading  */
+#education h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+    color: var(--dark-color);
+}
+/* light mode education heading */
+body.light #education h2{
+    color: var(--light-color);
+}
+/* for middle line */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    z-index: -1;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--dark-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+/* light mode middle line effect */
+body.light .timeline:before{
+    background-color: var(--light-color);
+}
+/* for graduation cap  */
+.cap{
+    color: var(--dark-color);
+}
+body.light .cap{
+    color:var(--light-color);
+}
+/* for education item  */
+.timeline-item {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--dark-color);
+    width: 45%;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  
+}
+/* lightmode education item */
+body.light .timeline-item{
+    background: var(--light-background);
+    box-shadow: 0 2px 10px var(--light-color);
+}
+/* for left education item  */
+.timeline-item.left {
+    left: 0;
+}
+/* for right education item */
+.timeline-item.right {
+    left: 55%;
+}
+/* for education section item & icon  */
+.timeline-item .timeline-icon {
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    background: var(--dark-background);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0 2px 10px var(--dark-color);
+    cursor: pointer;
+}
+/* light mode education item & education icon*/
+body.light .timeline-item .timeline-icon{
+    box-shadow: 0 2px 10px var(--light-color);
+    background: var(--light-background);
+    color: var(--light-color);
+}
+/* for right education item and icon */
+.timeline-item.right .timeline-icon {
+    left: -30px;
+}
+/* for education content */
+.timeline-content {
+    text-align: left;
+}
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+/* Skills section heading */
+#skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+    color: var(--dark-color);
+}
+/* light mode skills heading */
+body.light #skills h2 {
+    color: var(--light-color);
+}
+/* skill container for all items*/
+.skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding-bottom: 40px;
+    gap: 20px;
+    padding-top: 50px;
+}
+/* skills item styles for all and also inner border */
+.skill {
+    border: 2px solid var(--dark-color);
+    margin: 20px;
+    padding: 20px;
+    padding: 40px 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    background: var(--dark-background);
+    z-index: 2;
+    position: relative; 
+    cursor: pointer;
+}
+/* for light mode skills item styles for all and also inner border*/
+body.light .skill {
+    border: 3px solid var(--light-color);
+    background: var(--light-background);
+}
+/*dark mode language icons */
+.skill i {
+    font-size: 3em;
+    color: var(--dark-color);
+}
+/* for light mode language icons */
+body.light .skill i {
+    color: var(--light-color);
+}
+/* all language names */
+.skill span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--dark-color);
+}
+/* light mode language names */
+body.light .skill span {
+    color: var(--light-color);
+}
+/* outer border for skills */
+.outer-border {
+    border: 3px solid var(--dark-color);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; 
+}
+/* light mode bouter border */
+body.light .outer-border{
+    border: 3px solid var(--light-color);
+}
+/* outer border curtain effect */
+.outer-border::before {
+    content: "Cooming Soon";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%; /* Start above the element */
+    left: 0;
+    background: var(--dark-background);
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: transform 1s ease;
+    z-index: 3;
+}
+/* the specific content for language */
+.outer-border.html5::before {
+    content: "Complete";
+}
+/* the specific content for language */
+.outer-border.css3::before {
+    content: "Pending";
+}
+/* the specific content for language */
+.outer-border.js::before {
+    content: "In Progress";
+}
+/* light mode curtain effect */
+body.light .outer-border::before {
+    background: var(--light-background);
+    color: var(--light-color);
+}
+/* for active curtain effect */
+.outer-border:hover::before {
+    transform: translateY(100%); /* Slide down to cover the element */
+}
+/* Contact section  */
+#contact{
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+/* contact section heading */
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 80px;
+}
+/* contact section container */
+.contact-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+/* inner flip card container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+/* for active to flip the card */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+/* for fornt and back card flip with box shadow */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px var(--dark-color);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+/* for light mode for fornt and back card flip with box shadow */
+body.light .flip-card-front, .flip-card-back{
+    box-shadow: 0 2px 10px var(--light-color);
+}
+/* for flip card for fornt */
+.flip-card-front {
+    background-color: var(--dark-background);
+    color: var(--light-background);
+}
+/* light mode flip card */
+body.light .flip-card-front {
+    background-color: var(--light-background);
+    color: var(--dark-background);
+}
+/* rotate card */
+.flip-card-back {
+    background-color: var(--light-background);
+    color: var(--dark-color);
+    transform: rotateY(180deg);
+}
+/* light mode rortate card */
+body.light .flip-card-back {
+    background-color: var(--dark-background);
+    color: var(--light-background);
+}
+/* card icon */
+.flip-card i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+/* light mode card icon */
+body.light .flip-card i{
+    color: var(--light-color);
+}
+/* content heading inside the card */
+.flip-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--dark-color);
+}
+/* for light mode heading */
+body.light .flip-card h3{
+    color: var(--light-color);
+}
+/* also flip card heading */
+.flip-card p {
+    font-size: 1.2rem;
+    word-break: break-word;
+    text-align: center;
+}
+/* Footer styles */
+footer {
+    color:var(--dark-color);
+    padding: 20px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+/* light mode footer */
+body.light footer {
+    background:rgba(0, 0, 0, 0);
+    color: var(--light-color);
+}
+/* footer content styles */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* footer content */
+.footer-content p {
+    margin: 10px 0;
+}
+/* footer social icons */
+.social-links {
+    margin-top: 10px;
+}
+/* footer social icons with links  */
+.social-links a {
+    color:var(--dark-color);
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s,transform 0.3s;
+}
+/* light mode social icons */
+body.light .social-links a{
+    color:var(--light-color);
+    
+}
+/* hover effect on social icons */
+.foot-icon:hover {
+    color: black;
+    transform: scale(1.1);
+}
+/* light mode hover effect of social effect */
+body.light .foot-icon:hover {
+    transform: scale(1.3);
+    color: #7a7575;
+}
+
+/* for Responsive design to active all devices */
+@media screen and (max-width: 768px) {
+    /* home section */
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 250px;
+    }
+   /* home section bio and image */
+    .home-image,
+    .home-bio {
+        padding: 0;
+    }
+    .home-image {
+        margin-bottom: 20px;
+    }
+    /* typing effect font size */
+    #name,#element{
+        font-size: 1.9rem;
+    }
+    /* humburger effect */
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+/* navmenu display on small screen */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        width: 50%;
+        height: 370px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(50px);
+        border-bottom-left-radius: 2rem;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear, box-shadow 0.5s linear;
+        z-index: 200;
+        padding: 100px 10px 50px 0px;
+    }
+/* light mode nav menu */
+    body.light .nav-menu {
+        background:rgba(0, 0, 0, 0.5);
+    }
+/* active nav ,menu */
+    .nav-menu.active {
+        display: flex;
+        right: 0;
+    }
+/* active with box shadow */
+    .nav-menu:hover {
+        box-shadow: var(--dark-box-shadow);
+    }
+/* light mode active with box shadow */
+    body.light .nav-menu:hover {
+        box-shadow: var(--light-box-shadow);
+    }
+/* nav item styles */
+    .nav-link {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        color: var(--dark-color);
+    }
+/* light mode nav item styles */
+    body.light .nav-link {
+        color: var(--light-color);
+    }
+    /* soical links for home section */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+    }
+
+    /* Adjust timeline container */
+    .timeline {
+        position: relative; /* Ensure relative positioning */
+        padding: 20px 0;
+    }
+
+    /* Middle line */
+    .timeline:before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: var(--dark-color);
+        top: 0;
+        bottom: 0;
+        left: 50%; /* Adjust as needed */
+        transform: translateX(-50%);
+        z-index: -1; 
+    }
+
+    /* Adjust timeline items */
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        background: var(--dark-background);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px var(--dark-color);
+        position: relative;
+        z-index: 2;
+    }
+ 
+/* educatioon section ityem and graducation cap */
+    .timeline-item .timeline-icon {
+        left: 15px;
+    }
+/* right side item and icon */
+    .timeline-item.right .timeline-icon {
+        left: 15px;
+    }
+    .timeline:before {
+        left: 30px;
+    }
+    #education{
+        margin-top: 14rem;
+    }
+/* light mode middle line */
+    body.dark .timeline-item {
+        background: var(--dark-background);
+    }
+
+    /* for skill section */
+    #skills {
+        padding: 20px 10px;
+    }
+/* skills section heading */
+    #skills h2 {
+        font-size: 2.5em;
+    }
+/* skills all item styles */
+    .skill {
+        width: 170px;
+        margin: 20px 20px;
+        padding: 20px;
+    }
+/* skills with gap  */
+    .skills-list {
+        gap: 10px;
+    }
+
+
+/* footer section content */
+    .footer-content {
+        flex-direction: column;
+    }
+/* footer section icons */
+    .social-links {
+        margin-top: 10px;
+    }
+}
+/* also small screen  */
+@media screen and (min-width: 310px) {
+    #skills {
+        margin-top: 5rem;
+    }
+}
+

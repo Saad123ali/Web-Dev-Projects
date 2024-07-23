@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image" id="background-image">
+        <div class="text-overlay" id="text-overlay">
+            <h1 id="overlay-title">Your Text Here</h1>
+            <h3 id="overlay-episode">Episode</h3>
+            <p id="overlay-description">Some description or additional text can go here.</p>
+            <div class="buttons">
+                <button class="button">WATCH NOW</button>
+                <button class="button">MORE INFO</button>
+            </div>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="Naruto.jpeg" alt="Image 1" class="show">
+                </div>
+                <div class="carousel-slide">
+                    <img src="goju.png" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="demon.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="goku.jpeg" alt="Image 5">
+                </div>
+                <div class="carousel-slide">
+                    <img src="one piece.jpg" alt="Image 4">
+                </div>               
+                <div class="carousel-slide">
+                    <img src="chainsaw man.jpg" alt="Image 6">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Death-note.jpg" alt="Image 7">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Bleach.jpg" alt="Image 8">
+                </div>                
+
+            </div>
+            <div class="carousel-dots">
+                <span class="dot dot1" onclick="showSlide(0)"></span>
+                <span class="dot dot2" onclick="showSlide(1)"></span>
+                <span class="dot dot3" onclick="showSlide(2)"></span>
+            </div>
+            <div class="carousel-buttons">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

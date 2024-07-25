@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.parallax {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay effect */
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.text-overlay {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+    padding: 0 20px;
+    /* Add padding for smaller screens */
+}
+
+.text-overlay h1 {
+    margin: 0;
+    font-size: 4em;
+    padding: 10px;
+}
+
+/* Background images for different sections */
+.naruto {
+    background-image: url('Naruto.jpeg');
+}
+
+.goju {
+    background-image: url('goju.png');
+}
+
+.goku {
+    background-image: url('goku.jpeg');
+}
+
+.chainsaw {
+    background-image: url('chainsaw man.jpg');
+}
+
+.demon {
+    background-image: url('demon.jpg');
+}
+
+.one-piece {
+    background-image: url('one piece.jpg');
+}
+
+.wind-breaker {
+    background-image: url('wind breaker.jpg');
+}
+
+.black-cover {
+    background-image: url('black cover.jpg');
+}
+
+/* Styles for cast container */
+.cast-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive columns */
+    grid-template-rows: auto;
+    position: relative;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+    /* Add padding to ensure content doesn't touch edges */
+    box-sizing: border-box;
+    /* Ensure padding is included in width calculation */
+}
+
+.cast-item {
+    position: relative;
+    width: 100%;
+    /* Ensure full width within the grid */
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cast-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure images cover the container */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+    /* Default opacity for images */
+}
+
+.cast-item:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+    /* Fully visible on hover */
+    z-index: 2;
+    /* Bring hovered image to the front */
+}
+
+.cast-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width calculation */
+}
+
+/* Styles for navigation buttons */
+.navigation-buttons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* Responsive text overlay */
+@media (max-width: 768px) {
+    .text-overlay h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay h1 {
+        font-size: 1.5em;
+    }
+}

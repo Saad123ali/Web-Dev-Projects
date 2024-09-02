@@ -24,5 +24,5 @@ To run these projects locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Saad123ali/(https://github.com/Saad123ali/Web-Dev-Projects.git).git
-   cd  (https://github.com/Saad123ali/Web-Dev-Projects.git)
+   git clone https://github.com/Saad123ali/https://github.com/Saad123ali/Web-Dev-Projects.git.git
+   cd  https://github.com/Saad123ali/Web-Dev-Projects.git

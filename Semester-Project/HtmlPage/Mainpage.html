@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="Mainpage.css" /> -->
+  <title>Main page</title>
+  <style>
+    * 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container
+    {
+        /* display: flex; */
+        /* font-size: 14px; */
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url(3.png);
+        background-size: 100% 740px;
+    }
+    .navbar
+    {
+        /* margin: auto; */
+        padding: 0.5rem 1.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+    }
+    .nav-links
+    {
+        display: flex;
+        gap: 1.7rem;
+        /* gap: 2rem; */
+      }
+      .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.5rem;
+      }
+      .nav-link:hover {
+        background-color: #000000b3;
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+    .nav-link, li
+    {
+      list-style: none;
+      height: 100%;
+        /* padding: 0.5rem 1rem; */
+        font-weight: 600;
+        /* cursor: pointer;  */
+    }
+    /* .navbar { */
+      /* margin: 20px 0; */
+     
+    /* } */
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      transition: 0.3s ease-in-out color;
+    }
+
+    .logo:hover {
+      color: #222;
+    }
+
+    /* .nav-links {
+    } */
+ 
+    a {
+      text-decoration: none;
+      color: #000000b3;
+    }
+
+    .main-content {
+      padding: 178px; /* Adjusted padding */
+      text-align: center; 
+      color: white;
+    }
+
+    .bordered-text {
+      /* display: inline-block; */
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      transition: 0.3s ease-in-out border-color;
+    }
+
+    .bordered-text:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000b3;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">Abrar & Saad</div>
+      <ul class="nav-links">
+        <li class="nav-link"><a href="Login.html">Login</a></li>
+        <li class="nav-link"><a href="Signup.html">Signup</a></li>
+        <li class="nav-link"><a href="Recentask.html">Recent Task</a></li>
+        <li class="nav-link"><a href="Sevies.html">Services</a></li>
+        <li class="nav-link"><a href="About.html">About</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <h1><span class="bordered-text">Welcome to my website!</span></h1>
+      <br>
+      <h2><i>Presented by Abrar and Saad</i></h2>
+    </div>
+
+    <footer>
+      <div class="footer">
+        &copy; 2023 All copyright reserved
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

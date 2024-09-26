@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="About.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Portfolio</title>
+  <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .container
+    {
+      /* display: flex; */
+      font-size: 14px;
+      height: 100vh;
+      background-image: url(3.png);
+      background-size: 100% 740px;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar
+    {
+      /* margin: auto; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);   
+    }
+    .nav-links
+    {
+      display: flex;
+      gap: 1.7rem;
+    }
+    .nav-link,li
+    {
+      list-style: none;
+      height: 100%;
+      /* padding: 0.5rem 1rem; */
+      font-weight: 600;
+      cursor: pointer; 
+    }
+    a
+    {
+      text-decoration: none;
+      color:#000000b3;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      /* background-color: #222; */
+      color: white;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      transition: 0.3s ease-in-out color;
+    }
+
+    .logo:hover {
+      color: #222;
+    }
+
+    .nav-link {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+    }
+    .nav-link:hover {
+      background-color: #000000b3;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .main-content {
+      font-style: italic;
+      font-size: 15px;
+      padding: 40px;
+      /* text-align: center; */
+      display:flex;
+      align-items:baseline;
+      justify-content:space-evenly;
+    }
+
+    .profile-pic-container {
+      /* position: relative; */
+      padding: 10%;
+      text-align: center;
+    }
+
+    .profile-pic {
+      border-radius: 35%;
+      height: 225px;
+      width: 225px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+    
+    .profile-pic:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .main-content>div {
+      padding: 5%;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000b3;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .social-link {
+      margin: 15px;
+    }
+
+    .social-link a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 30px; /* Adjust the size as needed */
+    }
+    #title
+    {
+      font-weight: bold;
+      font-size: 15px;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="navbar">
+        <div class="logo">Abrar & Saad</div>
+        <ul class="nav-links">
+          <li class="nav-link"><a href="Login.html">Login</a></li>
+          <li class="nav-link"><a href="Signup.html">Signup</a></li>
+          <li class="nav-link"><a href="Recentask.html">Recent Task</a></li>
+          <li class="nav-link"><a href="Sevies.html">Services</a></li>
+          <li class="nav-link"><a href="About.html">About</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div>
+          <div class="profile-pic-container">
+            <img class="profile-pic" src="Abrar.jpg" alt="Error">
+            <div class="pic-info">
+              <pre>
+              <p id="title">I am Abrar Ali.I am a Programmer.</p>
+              </pre>
+              <div class="social-links">
+                <!-- Font Awesome Icons -->
+                <span class="social-link"><a href="https://www.linkedin.com/in/abrar-ali-61322a253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="social-link"><a href="https://www.facebook.com/profile.php?id=100072930763346&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></span>
+                <span class="social-link"><a href="https://www.instagram.com/ali.teach.aaa?igsh=aXhmYTZmZGEzaXNp" target="_blank"><i class="fab fa-instagram"></i></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="profile-pic-container">
+            <img class="profile-pic" src="Saadpic.jpg" alt="Error">
+            <div class="pic-info">
+              <pre>
+              <p id="title">I am Saad Ali.I am a Program Tester.</p>
+              </pre>
+              <div class="social-links">
+                <!-- Font Awesome Icons -->
+                <span class="social-link"><a href="https://www.linkedin.com/in/saad-ali-07b464298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                <span class="social-link"><a href="https://www.facebook.com/profile.php?id=100069233045434&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></span>
+                <span class="social-link"><a href="https://www.instagram.com/itmesaadali?igsh=MTAxNDFqOGZub2hiYg==" target="_blank"><i class="fab fa-instagram"></i></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+        &copy; 2023 All copyright reserved
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="recent.css" /> -->
+  <title>Recent Tasks</title>
+  <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .container
+    {
+        /* display: flex; */
+        /* font-size: 14px; */
+      height: 100vh;
+      background-image: url(4.png);
+      background-size: 100% 740px;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar
+    {
+      /* margin: auto; */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);   
+    }
+    .nav-links
+    {
+        display: flex;
+        gap: 1.7rem;
+        /* gap: 2rem; */
+    }
+    .nav-link, li
+    {
+      list-style: none;
+      height: 100%;
+        /* padding: 0.5rem 1rem; */
+      font-weight: 600;
+      cursor: pointer; 
+    }
+    body 
+    {
+      /* background-color: #000; */
+      color: white;
+      /* font-family: Arial, sans-serif; */
+    }
+    .logo 
+    {
+      font-size: 28px;
+      font-weight: bold;
+      transition: 0.3s ease-in-out color;
+    }
+
+    .logo:hover {
+      color: #222;
+    }
+    .nav-link {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+    }
+
+    .nav-link:hover {
+      background-color: #000000b3;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000b3;
+    }
+
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px; /* Add margin to create space between title and videos */
+    }
+
+    .video {
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      margin: 4px;
+      width: 30%; /* Set the width of the video */
+    }
+
+    video {
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      width: 60%;
+      /* height: auto; */
+    }
+
+    .video-description {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000b3;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">Abrar & Saad</div>
+      <ul class="nav-links">
+        <li class="nav-link"><a href="Login.html">Login</a></li>
+        <li class="nav-link"><a href="Signup.html">Signup</a></li>
+        <li class="nav-link"><a href="Recentask.html">Recent Task</a></li>
+        <li class="nav-link"><a href="Sevies.html">Services</a></li>
+        <li class="nav-link"><a href="About.html">About</a></li>
+      </ul>
+    </div>
+    <div class="videos">
+      <div style="width: 100%; text-align: center; margin-bottom: 30px;">
+        <h2>C++ Tasks</h2>
+      </div>
+      <div class="video">
+        <video src="C++Projectvideo.mp4" controls poster="Our Project.jpg"> my video</video>
+        <p class="video-description">Our C++ Project</p>
+      </div>
+      <div class="video">
+        <video src="Car project.mp4" controls poster="Car Project.jpg"> my video</video>
+        <p class="video-description">Parking Management in C++</p>
+      </div>
+      <div class="video">
+        <video src="Loading.mp4" controls poster="loading.jpg"> my video</video>
+        <p class="video-description">Loading Function in C++</p>
+      </div>
+      <div style="width: 100%; text-align: center; margin-bottom: 40px;">
+        <h2>HTML & CSS Tasks</h2>
+      </div>
+      <!-- Add the remaining videos in the desired order -->
+      <div class="video">
+        <video src="Loginvideo.mp4" controls poster="Login.jpg"> my video</video>
+        <p class="video-description">Login Page in HTML</p>
+      </div>
+      <div class="video">
+        <video src="SignUpvideo.mp4" controls poster="SIgnup.jpg"> my video</video>
+        <p class="video-description">Signup Page in HTML</p>
+      </div>
+      <div class="video">
+        <video src="HTMLProjectvideo.mp4" controls poster="Profile.jpg"> my video</video>
+        <p class="video-description">Our HTML Project</p>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        &copy; 2023 All copyright reserved
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

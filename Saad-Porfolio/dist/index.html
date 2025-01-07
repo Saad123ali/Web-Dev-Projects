@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon-CUe7hSLG.gif" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" crossorigin href="./assets/index-Ku7pGScf.css">
+</head>
+
+<body class="scroll-smooth">
+  <!-- Navbar -->
+  <nav class="flex justify-between p-4 lg:justify-center lg:space-x-96 bg-white fixed top-0 left-0 w-full z-50">
+    <div class="logo uppercase font-mono font-extrabold text-3xl lg:text-4xl pt-1">SaadAli</div>
+    <div class="hamburger font-bold text-2xl lg:hidden items-center flex cursor-pointer" id="toggle-menu">
+      <i class="bi bi-list"></i>
+    </div>
+    <div class="items hidden lg:block">
+      <ul class="flex space-x-4 items-center">
+        <li class="hover:text-green-600"><a href="#home">Home</a></li>
+        <li class="hover:text-green-600"><a href="#about">About</a></li>
+        <li class="hover:text-green-600"><a href="#service">Services</a></li>
+        <li class="hover:text-green-600"><a href="#work">Work</a></li>
+        <button id="contact" 
+          class="border border-gray-900 uppercase font-mono pl-3 pr-3 text-xl leading-loose font-extrabold  hover:bg-[#14d61b] hover:text-white hover:border-none">
+          <a href="#contact">Contact</a> 
+        </button>
+      </ul>
+    </div>
+  </nav>
+  <!-- Toggle Menu -->
+  <div class="items hidden fixed top-0 right-0 bg-white w-full h-full shadow-lg z-50 lg:hidden" id="menu">
+    <div class="close absolute top-4 right-4 text-4xl cursor-pointer" id="close-menu">
+      &times;
+    </div>
+    <ul class="mt-16 space-y-4">
+      <li class="w-full text-left pl-6 hover:text-green-600"><a href="#home">Home</a></li>
+      <li class="w-full text-left pl-6 border-t pt-2 px-6 hover:text-green-600"><a href="#about">About</a></li>
+      <li class="w-full text-left pl-6 border-t pt-2 px-6 hover:text-green-600"><a href="#service">Services</a></li>
+      <li class="w-full text-left pl-6 border-t pt-2 px-6 hover:text-green-600"><a href="#work">Work</a></li>
+      <li class="w-full text-center pt-4">
+        <a href="#cotnact">
+          <button
+            class="w-4/5 mx-auto block border-2 border-gray-900 uppercase font-mono text-xl py-2 px-6 font-extrabold hover:bg-[#14d61b] hover:text-white hover:border-none">
+            Contact
+          </button>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="home" class="relative bg-cover bg-center h-screen lg:bg-fixed sm:bg-auto md:bg-auto"
+    style="background-image: url('./assets/Background-BtQRIwnJ.jpeg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-65"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <div class="text-left p-6 lg:pl-32 text-white ">
+        <h1 class="text-4xl  font-bold mb-4">Welcome to My Portfolio</h1>
+        <p class="text-xl ">Hi, I'm Saad Ali, a passionate web developer creating modern, responsive, and user-friendly
+          web experiences..</p>
+        <button class="mt-6 px-9 py-3 bg-[#14d61b] hover:bg-[#16991a] text-white font-bold uppercase rounded">
+          <a href="https://github.com/Saad123ali">GitHub</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about"
+    class="relative -mt-20 z-20 bg-white py-8 px-7 lg:flex lg:items-center lg:justify-center h-screen lg:space-x-10 lg:space-y-8 lg:pl-20 lg:pr-20">
+    <div class="text-justify lg:text-xl lg:w-3/4">
+      <h2 class="text-left uppercase text-[#16991a] font-bold text-sm tracking-widest">
+        EXPERT WEB DEVELOPMENT
+      </h2>
+      <h1 class="text-2xl font-bold pt-2">Discover My Work</h1>
+      <p class="text-gray-600 pt-2 leading-6">
+        Explore my portfolio, where I showcase a range of web development projects, including my Movie Recommendation
+        System and other innovative applications. With a focus on both frontend and backend technologies, I build
+        user-centric solutions using Node.js, EJS, SQL, JavaScript, and modern frameworks like Tailwind CSS and
+        Bootstrap. Each project demonstrates my ability to create functional, intuitive, and scalable systems that
+        address real-world challenges.
+      </p>
+      <button class="underline text-gray-800 pt-5 hover:no-underline transition-all">
+        <a href="">Get in touch</a>
+      </button>
+    </div>
+
+    <!-- Image Container -->
+    <div
+      class="pt-4 w-full h-auto flex justify-center items-center overflow-hidden sm:h-[300px] md:h-[400px] lg:h-auto">
+      <img src="./assets/second-section-DL6JL-eU.jpeg" class="object-cover w-full h-full" alt="Portfolio Image">
+    </div>
+  </section>
+
+  <section id="service" class="bg-[#eef1ef] p-5 pt-7 transition-transform duration-500 ">
+    <div class="pl-6">
+      <h1 class="text-left uppercase text-[#16991a] font-bold text-sm tracking-widest">Working on it</h1>
+      <h1 class="text-xl font-bold pt-2">Transforming ideas into digital reality</h1>
+    </div>
+
+    <div class="space-y-6 pt-10 md:flex ">
+      <!-- Movie Recommendation System -->
+      <div class="w-auto transition-transform duration-500 transform scale-90 hover:scale-95 cursor-pointer">
+        <img src="./assets/1-DT5aFx_g.jpeg" alt="Movie Recommendation" class="object-cover w-full h-auto">
+        <div class="bg-white pl-5">
+          <h1 class="text-xl font-bold pt-5 hover:text-[#14d61b]">Movie Recommendation System</h1>
+          <p class="text-gray-600 pt-2 pb-3 leading-6">Suggest your favourite movie and top-rated movies through our
+            system.</p>
+        </div>
+      </div>
+
+      <!-- E-commerce System -->
+      <div class="w-auto transition-transform duration-500 transform scale-90 hover:scale-95 cursor-pointer">
+        <img src="./assets/2-pFWlW1EO.jpeg" alt="E-commerce System" class="object-cover w-full h-auto">
+        <div class="bg-white pl-5">
+          <h1 class="text-xl font-bold pt-5 hover:text-[#14d61b]">E-commerce System</h1>
+          <p class="text-gray-600 pt-2 pb-3 leading-6">Empower your online business with our e-commerce expertise.</p>
+        </div>
+      </div>
+
+      <!-- SEO Optimization -->
+      <div class="w-auto transition-transform duration-500 transform scale-90 hover:scale-95 cursor-pointer">
+        <img src="./assets/3-BUGEbtcW.jpeg" alt="SEO Optimization" class="object-cover w-full h-auto">
+        <div class="bg-white pl-5">
+          <h1 class="text-xl font-bold pt-5 hover:text-[#14d61b]">SEO Optimization</h1>
+          <p class="text-gray-600 pt-2 pb-3 leading-6">Boost your online visibility with our expert SEO services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="pt-7 space-x-4 pr-4 pb-2">
+    <div class=" pl-5">
+      <h1 class="text-left uppercase text-[#16991a] font-bold text-sm tracking-widest">Get in touch</h1>
+      <h1 class="text-xl font-bold pt-2">Let's discuss your project ideas!</h1>
+    </div>
+
+    <div class="space-y-4 pt-4 ">
+      <div class="space-y-1">
+        <label for="name" class="block font-semibold ">Name</label>
+        <input id="name" type="text" name="name" placeholder="Full name"
+          class="w-full p-2  border border-gray-300 rounded-md" required>
+      </div>
+
+      <div class="space-y-1">
+        <label for="email" class="block font-semibold">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email address"
+          class="w-full p-2 border border-gray-300 rounded-md" required>
+      </div>
+
+      <div class="space-y-1">
+        <label for="phone" class="block font-semibold">Phone number</label>
+        <input id="phone" type="tel" name="phone" placeholder="03XX-XXXXXXX"
+          class="w-full p-2 border border-gray-300 rounded-md" required>
+      </div>
+
+      <div class="space-y-1">
+        <label for="message" class="block font-semibold">Message</label>
+        <textarea id="message" name="message" placeholder="Your message" rows="4"
+          class="w-full p-2 border border-gray-300 rounded-md" required></textarea>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <input type="checkbox" id="newsletter" name="newsletter" class="h-4 w-4">
+        <label for="newsletter" class="text-sm">Some Important Talk</label>
+      </div>
+
+      <div class="flex justify-center items-center h-full pb-4">
+        <button type="submit"
+        class="w-full lg:w-72 flex justify-center p-2 bg-[#14d61b] text-white py-2 px-6 hover:bg-[#16991a]">
+        Submit
+      </button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="cotnact" class="bg-[#162415] text-white py-6 px-4 sm:px-6 md:px-8">
+    <div class="container overflow-hidden">
+      <!-- Social Links -->
+      <div class="flex flex-wrap space-y-4 sm:space-y-0 items-center justify-center text-center">
+        <div class="flex flex-wrap justify-center space-x-4 sm:space-x-6">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/saadalinetwork/" class="hover:text-[#0A66C2] transition">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <!-- LeetCode -->
+          <a href="https://leetcode.com/u/itsmesaad/" class="hover:text-yellow-500 transition">
+            <i class="bi bi-code-slash"></i> LeetCode
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/itsmesaadali" class="hover:text-blue-500 transition">
+            <i class="bi bi-facebook"></i> Facebook
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/stories/itsmesaadali/" class="hover:text-pink-500 transition">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <!-- Email -->
+          <a href="mailto:itmesaad@gmail.com" class="hover:text-red-500 transition">
+            <i class="bi bi-envelope-fill"></i> Email
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/Saad123ali" class="hover:text-gray-500 transition">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/923169777831" class="hover:text-green-500 transition">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center mt-6">
+        <p class="text-sm md:text-base">&copy; 2025 Saad Ali. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+
+</body>
+<script>
+  // Select elements
+const toggleMenu = document.getElementById("toggle-menu");
+const closeMenu = document.getElementById("close-menu");
+const menu = document.getElementById("menu");
+const menuLinks = menu.querySelectorAll("a"); // Select all <a> tags inside the menu
+
+// Open the menu
+toggleMenu.addEventListener("click", () => {
+  menu.classList.remove("hidden");
+});
+
+// Close the menu
+closeMenu.addEventListener("click", () => {
+  menu.classList.add("hidden");
+});
+
+// Close the menu when any link is clicked
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.add("hidden");
+  });
+});
+
+
+</script>
+
+</html>
